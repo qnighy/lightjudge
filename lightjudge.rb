@@ -116,6 +116,7 @@ class LJServlet < WEBrick::HTTPServlet::AbstractServlet
             res.content_type = "text/html"
             res.body = page.get; return
           rescue
+            $stderr.puts ([$!.message]+$!.backtrace).join("\n")
             makeRedirect(res,"/#{contest_name}/register")
           end
         when !is_get && "/workplace"
