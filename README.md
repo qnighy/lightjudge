@@ -1,35 +1,44 @@
 # LightJudge #
 
-ICPC �����\�I ����K���邽�߂ɍ���Ă݂��W���b�W�T�[�o�[�ł��B
+ICPC 国内予選 を練習するために作ってみたジャッジサーバーです。
 
-����
+特徴
 
-- Ruby 1.9 ��������Γ���
+- Ruby 1.9 さえあれば動く
 
-����
+注意
 
-- �X�P�[�����O�̂��Ƃ͉����l���Ă��܂���B10�`�[���ȓ����炢�̐l���łЂ������邭�炢�̏󋵂�z�肵���̂ŁB
+- スケーリングのことは何も考えていません。10チーム以内くらいの人数でひっそりやるくらいの状況を想定したので。
+- まだ制作途中です。
 
-# �������� #
+## 実装済みの機能 ##
 
-## Ruby �̃C���X�g�[�� ##
+- ログイン・ユーザー登録
+- 問題の閲覧
+- 解答の提出
+- 提出状況の概要の確認
+- standingsの閲覧
 
-Linux, Mac�͒m��܂���B�K���ɃC���X�g�[�����Ă��������B
+## つかいかた ##
 
-Windows �̏ꍇ RubyInstaller ( http://rubyinstaller.org/ ) ���I�X�X���ł��B
+### Ruby のインストール ###
 
-Ruby 1.9 �����ĉ������B�茳�̓������1.9.3pl125�ł����B
+Linux, Macは知りません。適当にインストールしてください。
 
-## �N�� ##
+Windows の場合 RubyInstaller ( http://rubyinstaller.org/ ) がオススメです。
+
+Ruby 1.9 を入れて下さい。手元の動作環境は1.9.3pl125でした。
+
+### 起動 ###
 
     ruby lightjudge.rb
 
-�Ƃ���ċN��������A http://localhost:8080/example/ �����ɍs���ĉ������B
+とやって起動したら、 http://localhost:8080/example/ を見に行って下さい。
 
-���Ƃ͓K���ɂ���Ă��������B
+あとは適当にやってください。
 
-## �ҏW ##
+### 編集 ###
 
-contests/example/ ���Q�l�ɂ��Ă���΂��Ă�������
+contests/example/ を参考にしてがんばってください
 
 
