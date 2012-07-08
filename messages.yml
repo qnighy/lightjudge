@@ -1,0 +1,82 @@
+0:
+  type: "CONGRAT"
+  title: "Congratulations!"
+  message:
+    - "You have successfully finished this problem."
+1:
+  type: "AC"
+  title: "Correct Answer."
+  message:
+    - "Proceed to the next data."
+2:
+  type: "AC"
+  title: "Correct Answer."
+  message:
+    - "Proceed to the next data."
+    - "Recall that to finish a problem, you need to correctly answer two data in a row, with the same program."
+3:
+  type: "HOPELESS"
+  title: "Correct answer, with a program different from the last one."
+  message:
+    - "BAD NEWS: You can no longer finish this problem, because you would need to answer the next data correctly with the same program, yet there are no data left for this problem. Recall that to finish a problem, you need to correctly answer two data in a row, with the same program."
+4:
+  type: "AC"
+  title: "Correct answer, with a program different from the last one."
+  message:
+    - "Proceed to the next data."
+    - "Recall that to finish a problem, you need to correctly answer two data in a row, with the same program."
+5:
+  type: "MISSING"
+  title: "Empty answer."
+  message:
+    - "You either specified a wrong file name which does not exist, or an empty file. Enter a correct file name in the box."
+6:
+  type: "MISSING"
+  title: "Empty program."
+  message:
+    - "You either specified a wrong file name which does not exist, or an empty file. Enter a correct file name in the box."
+7:
+  type: "MISSING"
+  title: "No answer file."
+  message:
+    - "Enter a file name in the box."
+8:
+  type: "MISSING"
+  title: "Missing problem."
+  message:
+    - "Select a problem in the list."
+9:
+  type: "MISSING"
+  title: "No program file."
+  message:
+    - "Enter a file name in the box."
+10:
+  type: "WRONG"
+  title: "Wrong answer."
+  message:
+    - "Try again."
+11:
+  type: "WRONG"
+  title: "Wrong answer."
+  message:
+    - "Try again."
+    - "You need to correctly answer two more data. Recall that to finish a problem, you need to correctly answer two data in a row, with the same program."
+12:
+  type: "HOPELESS"
+  title: "Wrong answer."
+  message:
+    - "Wrong answer."
+    - "BAD NEWS: You can no longer finish this problem, because you would need to answer two more data correctly, yet there is only one data left for this problem. Recall that to finish a problem, you need to correctly answer two data in a row, with the same program."
+13:
+  type: "MISSING"
+  title: "The rehearsal is over."
+  message:
+    - "The rehearsal is over."
+    - "You can no longer send your answer."
+14:
+  type: "MISSING"
+  title: "Binary program."
+  message:
+    - "Binary program."
+    - "You specified a binary (executable) program or compiled Java class file. Enter a file name of a source program in the box."
+

@@ -1,0 +1,62 @@
+body {
+  min-width: 350px;
+  max-width: 700px;
+  border: 1px #CC33CC solid;
+  margin: 5px;
+  padding: 5px;
+}
+body > h1 {
+  border: 3px #CC33CC solid;
+  color: black;
+  text-align: center;
+  font-size: 3em;
+  margin: 5px 0px;
+  padding: 5px;
+}
+body > section {
+  border: 1px #CC33CC solid;
+  margin: 5px 0px;
+  padding: 0px 5px;
+}
+body > section > h2 {
+  background-color: #CC33CC;
+  color: white;
+  font-size: medium;
+  margin: 0px -5px;
+  padding: 5px 5px;
+}
+body > section > section {
+  margin: 0px 0px;
+  padding: 0px 0px;
+}
+body > section > section > h3 {
+  background-color: #FF66FF;
+  color: white;
+  font-size: medium;
+  margin: 0px -5px;
+  padding: 0px 10px;
+}
+body > section.CONGRAT {
+  border: 1px #00FF88 solid;
+}
+body > section > h2.CONGRAT {
+  background-color: #00FF88;
+}
+body > section.HOPELESS {
+  border: 1px #FF0000 solid;
+}
+body > section > h2.HOPELESS {
+  background-color: #FF0000;
+}
+body > section.WRONG {
+  border: 1px #FFA500 solid;
+}
+body > section > h2.WRONG {
+  background-color: #FFA500;
+}
+body > section.MISSING {
+  border: 1px #444444 solid;
+}
+body > section > h2.MISSING {
+  background-color: #444444;
+}

@@ -1,0 +1,12 @@
+<section>
+  <h2>Registerd to <%= @contest.name %></h2>
+  <ul>
+    <li>Team ID: <%= @options[0][0] %></li>
+    <li>Password: <%= @options[0][1] %></li>
+    <li>Team Name: <%= WEBrick::HTMLUtils.escape(@options[0][2]) %></li>
+    <li>University: <%= WEBrick::HTMLUtils.escape(@options[0][3]) %></li>
+  </ul>
+  <p>!! Please remember this information !!</p>
+  <p><a href="/<%= @contest.name %>/login">Go to Login page</a></p>
+</section>
+

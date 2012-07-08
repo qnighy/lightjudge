@@ -1,0 +1,15 @@
+<section>
+  <h2>List of Teams</h2>
+  <table>
+    <tr>
+      <th>Team ID</th>
+      <th>Nickname</th>
+    </tr>
+% @contest.teams.each do|teamid,(passwd,teamname,univname)|
+    <tr>
+      <td><%= teamid %></td>
+      <td><%= WEBrick::HTMLUtils.escape(teamname) %></td>
+    </tr>
+% end
+  </table>
+</section>

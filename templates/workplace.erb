@@ -1,0 +1,43 @@
+<section>
+  <h2>Get Data</h2>
+% @contest.problems.each do|problem|
+%   dataid = @contest.getDataID(@teamid, problem)
+%   if dataid
+  <p>Problem <%= problem %>: <a href="/<%= @contest.name %>/input/<%= problem %>-<%= dataid %>">Data No. <%= dataid %></a></p>
+%   end
+% end
+</section>
+<section>
+  <h2>Send Answer</h2>
+  <form action="/<%= @contest.name %>/workplace" method="post" enctype="multipart/form-data">
+    <table>
+      <tr>
+        <td><label for="problem">Problem:</label></td>
+        <td><select id="problem" name="problem">
+            <option>Select a problem</option>
+% @contest.problems.each do|problem|
+%   dataid = @contest.getDataID(@teamid, problem)
+%   if dataid
+            <option value="<%= problem %>"><%= problem %></option>
+%   end
+% end
+        </select></td>
+      </tr>
+      <tr>
+        <td><label for="answer">Filename of answer:</label></td>
+        <td><input type="file" id="answer" name="answer"></td>
+      </tr>
+      <tr>
+        <td><label for="program">Filename of program:</label></td>
+        <td><input type="file" id="program" name="program"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <input type="submit" value="send">
+          <input type="reset" value="reset">
+        </td>
+      </tr>
+    </table>
+  </form>
+</section>

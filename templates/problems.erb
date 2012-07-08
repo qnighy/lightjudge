@@ -1,0 +1,56 @@
+<section>
+  <h2>Links</h2>
+  <p>
+% @contest.problems.each do|problem|
+    <a href=""><%= problem %></a>
+% end
+  </p>
+</section>
+% @contest.problems.each do|problem|
+%   stmt = File.read("contests/#{@contest.name}/statements/#{problem}.html") rescue ""
+%   title = "Untitled Problem #{problem}"
+%   stmt1 = stmt2 = stmt3 = nil
+%   stmt.split(/<h3/).each do|section|
+%     lines = section.lines.to_a
+%     fline = lines.shift
+%     case fline
+%     when /title/
+%       if fline =~ />(.*)</
+%         title = $1
+%       end
+%       stmt1 = lines.join
+%     when /Input/
+%       stmt2 = lines.join
+%     when /Output/
+%       stmt3 = lines.join
+%     end
+%   end
+
+<section>
+  <h2><%= problem %></h2>
+  <section>
+    <h3><%= title %></h3>
+    <p><%= stmt1 %></p>
+  </section>
+  <section>
+    <h3>Input</h3>
+    <p><%= stmt2 %></p>
+  </section>
+  <section>
+    <h3>Output</h3>
+    <p><%= stmt3 %></p>
+  </section>
+  <section>
+    <h3>Sample Input</h3>
+% File.open("contests/#{@contest.name}/io/#{problem}0") {|file|
+    <pre><%= WEBrick::HTMLUtils::escape(file.read) %></pre>
+% } rescue nil
+  </section>
+  <section>
+    <h3>Output for the Sample Input</h3>
+% File.open("contests/#{@contest.name}/io/#{problem}0.ans") {|file|
+    <pre><%= WEBrick::HTMLUtils::escape(file.read) %></pre>
+% } rescue nil
+  </section>
+</section>
+% end

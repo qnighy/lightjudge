@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/style.css">
+    <title><%= @contest.name %> - LightJudge</title>
+  </head>
+  <body>
+    <h1><%= @contest.name %></h1>
+% if @teamid && @type != :problems
+<section>
+  <h2>Team <%= @teamid %>: <%= WEBrick::HTMLUtils::escape(@contest.teams[@teamid.to_s][1]) %></h2>
+  <ul>
+% @contest.problems.each do|problem|
+%   status = @contest.getStatus(@teamid,problem)
+%   if status[0] == 2
+    <li><%= problem %>: Accepted. penalty = <%= status[1] %></li>
+%   else
+    <li><%= problem %>: <%= ["Two more", "One more", "", "Hopeless"][status[0]] %></li>
+%   end
+% end
+  </ul>
+  <form action="/<%= @contest.name %>/logout" method="post">
+    <p>
+      <a href="/<%= @contest.name %>/">Top</a>
+      <a href="/<%= @contest.name %>/problems">Problems</a>
+      <a href="/<%= @contest.name %>/workplace">Workplace</a>
+      <a href="/<%= @contest.name %>/standings">Standings</a>
+      <input type="submit" value="Logout">
+    </p>
+  </form>
+</section>
+% end
+
+% case @type
+% when :teamlist
+<%= self.get_teamlist %>
+% when :standings
+<%= self.get_standings %>
+% when :login
+<%= self.get_login %>
+% when :register
+<%= self.get_register %>
+% when :registered
+<%= self.get_registered %>
+% when :top
+<%= self.get_top %>
+% when :problems
+<%= self.get_problems %>
+% when :workplace
+<%= self.get_workplace %>
+% when :result
+<%= self.get_result %>
+% else
+% raise "unrecoginzed page type"
+% end
+  </body>
+</html>

@@ -1,0 +1,9 @@
+% msg = $messages[@options[0]]
+<section class="<%= msg["type"] %>">
+  <h2 class="<%= msg["type"] %>">Result</h2>
+  <p><%= msg["title"] %></p>
+% msg["message"].each do|message|
+  <p><%= message %></p>
+% end
+  <p><a href="/<%= @contest.name %>/workplace">Go Back</a></p>
+</section>

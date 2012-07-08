@@ -1,0 +1,19 @@
+<section>
+  <h2>Register to <%= @contest.name %></h2>
+  <form action="/<%= @contest.name %>/register" method="post">
+    <table>
+      <tr>
+        <td><label for="teamname">Team name:</label></td>
+        <td><input type="text" id="teamname" name="teamname" value=""></td>
+      </tr>
+      <tr>
+        <td><label for="univname">University:</label></td>
+        <td><input type="text" id="univname" name="univname" value=""></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><input type="submit" value="Register"></td>
+      </tr>
+    </table>
+  </form>
+</section>

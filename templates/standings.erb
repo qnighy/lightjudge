@@ -1,0 +1,25 @@
+<section>
+  <h2>Standings</h2>
+  <table>
+    <tr>
+      <th>rank</th>
+      <th>team id</th>
+      <th>nickname</th>
+      <th>university</th>
+      <th>solved</th>
+      <th>time</th>
+    </tr>
+% @contest.teams.map {|teamid,(passwd,teamname,univname)|
+%   [@contest.getTeamScore(teamid),teamid,teamname,univname]
+% }.sort.each_with_index do|((solved,time),teamid,teamname,univname),idx|
+    <tr>
+      <td><%= idx + 1 %></td>
+      <td><%= teamid %></td>
+      <td><%= WEBrick::HTMLUtils.escape(teamname) %></td>
+      <td><%= WEBrick::HTMLUtils.escape(univname) %></td>
+      <td><%= solved %></td>
+      <td><%= time %></td>
+    </tr>
+% end
+  </table>
+</section>
