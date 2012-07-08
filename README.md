@@ -29,11 +29,16 @@ Windows の場合 RubyInstaller ( http://rubyinstaller.org/ ) がオススメで
 
 Ruby 1.9 を入れて下さい。手元の動作環境は1.9.3pl125でした。
 
+!! **CygwinのRubyは1.8です** !! Cygwinはクソだな
+!! **Mac OS X LionのプリインストールのRubyは1.8です** !! Mac OS X Lionはクソだな
+
 ### 起動 ###
 
     ruby lightjudge.rb
 
 とやって起動したら、 http://localhost:8080/example/ を見に行って下さい。
+
+!! **--encodingオプションが無いって言われたら→Ruby1.8を使っている可能性があります** !!
 
 あとは適当にやってください。
 
