@@ -79,7 +79,7 @@ class LJServlet < WEBrick::HTTPServlet::AbstractServlet
             res.content_type = "text/plain"
             res["Content-Disposition"] = "attachment; filename=\"#$1-#$2\""
             res.filename = "#$1-#$2"
-            res.body = File.read("contests/#{contest_name}/io/#$1-#$2")
+            res.body = File.read("contests/#{contest_name}/io/#$1#$2")
           else
             make404(res)
           end
